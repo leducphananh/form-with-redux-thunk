@@ -1,0 +1,35 @@
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.page-btn {
+    width: 2rem;
+    height: 2rem;
+    border-color: transparent;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: all 0.3s linear;
+    box-shadow: 2px 5px 3px 0px var(--box-shadow-color);;
+}
+
+.active-btn {
+    background-color: var(--text-color);
+    color: var(--white-color);
+    pointer-events: none;
+}
+
+.prev-btn,
+.next-btn {
+    background: transparent;
+    border-color: transparent;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}

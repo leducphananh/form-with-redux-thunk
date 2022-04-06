@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import CustomRoutes from 'components/CustomRoutes';
+import Navbar from 'components/Navbar';
+import { Suspense } from 'react';
+import { BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
+import routes from 'routes/route';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Suspense fallback={<div className="loader"></div>}>
+        <div className="main">
+          <Navbar navItems={routes} />
+
+          <Switch>
+            <Redirect exact from="/" to={routes[0].path} />
+            <CustomRoutes routes={routes} />
+          </Switch>
+        </div>
+      </Suspense>
+    </Router>
   );
 }
 

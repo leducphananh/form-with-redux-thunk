@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "name": "Lê Đức Phan Anh",
+      "gender": "Male",
+      "dob": "2000-04-22",
+      "phone": "0366155338",
+      "email": "anhldp@gmail.com",
+      "address": "Hà Tây",
+      "description": "phan anh desc",
+      "courses": [
+        "HTML",
+        "CSS",
+        "JS"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Lê Đức Phan Anh 1",
+      "gender": "Male",
+      "dob": "2000-04-22",
+      "phone": "0366155338",
+      "email": "anhldp@gmail.com",
+      "address": "Hà Tây",
+      "description": "phan anh desc 1",
+      "courses": [
+        "HTML"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Lê Đức Phan Anh 2",
+      "gender": "Male",
+      "dob": "2000-04-22",
+      "phone": "0366155338",
+      "email": "anhldp@gmail.com",
+      "address": "Hà Tây",
+      "description": "phan anh desc 2",
+      "courses": [
+        "CSS"
+      ],
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Nguyễn Thị A",
+      "gender": "Female",
+      "dob": "1111-11-11",
+      "phone": "03211546564",
+      "email": "ant@gmail.com",
+      "address": "Hà Đông",
+      "description": "desc ant",
+      "courses": [
+        "HTML",
+        "CSS",
+        "JS"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Le Duc Phan Anh",
+      "gender": "Female",
+      "dob": "5555-05-05",
+      "phone": "345435345345",
+      "email": "anhldp3@gmail.com",
+      "address": "Hà Nội",
+      "description": "",
+      "courses": [
+        "HTML",
+        "CSS",
+        "JS"
+      ]
+    }
+  ]
+}
