@@ -1,8 +1,10 @@
+export const _limitPerPage = 3;
+
 export const getUsers = () => async dispatch => {
     try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { REACT_APP_API_URL } = process.env;
-        const response = await fetch(REACT_APP_API_URL + '?_page=1&_limit=3', {
+        const response = await fetch(`${REACT_APP_API_URL}?_page=1&_limit=${_limitPerPage}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -116,7 +118,7 @@ export const changeSearchTerm = (searchTerm) => async dispatch => {
     try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { REACT_APP_API_URL } = process.env;
-        const response = await fetch(REACT_APP_API_URL + '?q=' + searchTerm + '&_page=1&_limit=3', {
+        const response = await fetch(`${REACT_APP_API_URL}?q=${searchTerm}&_page=1&_limit=${_limitPerPage}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -147,11 +149,11 @@ export const changeSearchTerm = (searchTerm) => async dispatch => {
     }
 }
 
-export const changePage = (page, q, _limit) => async dispatch => {
+export const changePage = (page, q) => async dispatch => {
     try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { REACT_APP_API_URL } = process.env;
-        const response = await fetch(REACT_APP_API_URL + '?q=' + q + '&_page=' + page + '&_limit=' + _limit, {
+        const response = await fetch(`${REACT_APP_API_URL}?q=${q}&_page=1&_limit=${_limitPerPage}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -181,7 +183,7 @@ export const getAmount = (q) => async dispatch => {
     try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { REACT_APP_API_URL } = process.env;
-        const response = await fetch(REACT_APP_API_URL + '?q=' + q, {
+        const response = await fetch(`${REACT_APP_API_URL}?q=${q}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

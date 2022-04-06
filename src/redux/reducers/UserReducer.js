@@ -15,7 +15,6 @@ const initialState = {
     message: null,
     filter: {
         _page: 1,
-        _limit: 3,
         q: '',
     },
     amount: 0,

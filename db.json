@@ -19,7 +19,7 @@
       "name": "Lê Đức Phan Anh 1",
       "gender": "Male",
       "dob": "2000-04-22",
-      "phone": "0366155338",
+      "phone": "0123456789",
       "email": "anhldp@gmail.com",
       "address": "Hà Tây",
       "description": "phan anh desc 1",
@@ -58,11 +58,11 @@
     },
     {
       "id": 5,
-      "name": "Le Duc Phan Anh",
+      "name": "Le Thi C",
       "gender": "Female",
       "dob": "5555-05-05",
       "phone": "345435345345",
-      "email": "anhldp3@gmail.com",
+      "email": "clt@gmail.com",
       "address": "Hà Nội",
       "description": "",
       "courses": [

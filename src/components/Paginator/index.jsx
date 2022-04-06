@@ -2,19 +2,20 @@ import React, { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changePage, getAmount } from 'redux/actions/UserActions';
 import './Paginator.css';
+import { _limitPerPage } from 'redux/actions/UserActions';
 
 const Paginator = () => {
 
     const dispatch = useDispatch();
     const { amount, filter } = useSelector(state => state.user);
-    const { _page, _limit, q } = filter;
+    const { _page, q } = filter;
 
     useEffect(() => {
         dispatch(getAmount(q));
     }, [dispatch, q])
 
     const listBtns = useMemo(() => {
-        const numberOfPages = amount / _limit;
+        const numberOfPages = amount / _limitPerPage;
 
         let btns = [];
         for (let i = 0; i < numberOfPages; i++) {
@@ -22,10 +23,10 @@ const Paginator = () => {
         }
 
         return btns;
-    }, [amount, _limit]);
+    }, [amount]);
 
     const handlePageChange = (page) => {
-        dispatch(changePage(page, q, _limit));
+        dispatch(changePage(page, q));
     }
 
     return (
