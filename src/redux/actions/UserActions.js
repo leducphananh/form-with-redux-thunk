@@ -153,7 +153,7 @@ export const changePage = (page, q) => async dispatch => {
     try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { REACT_APP_API_URL } = process.env;
-        const response = await fetch(`${REACT_APP_API_URL}?q=${q}&_page=1&_limit=${_limitPerPage}`, {
+        const response = await fetch(`${REACT_APP_API_URL}?q=${q}&_page=${page}&_limit=${_limitPerPage}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
